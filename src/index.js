@@ -5,6 +5,9 @@ import express from 'express'
 
 const app = express ()
 
+app.set('vew engine', 'ejs');
+
+
 app.get ('/', (rep,res) => res.send('hello word'));
 
 
