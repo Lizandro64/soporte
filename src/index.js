@@ -1,15 +1,16 @@
 
 
 import express from 'express'
-import {dirname} from 'path'
+import {dirname, join} from 'path'
 import { fileURLToPath } from 'url'
 
 const app = express ()
 
-dirname(fileURLToPath(import.meta.url))
+const __dirname = dirname(fileURLToPath(import.meta.url))
+console.log(join( __dirname, '/views'))
 
 
-app.set('views', )
+app.set('views', join(__dirname, ' views'))
 app.set('vew engine', 'ejs');
 
 
